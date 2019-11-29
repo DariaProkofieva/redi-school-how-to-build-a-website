@@ -13,7 +13,6 @@ if [ -z "$(docker ps | grep redi_frontend_proxy)" ]; then
           --name redi_frontend_proxy \
           --network redi_school \
           -p 80:80 \
-          -p 443:443 \
           -v /var/run/docker.sock:/tmp/docker.sock:ro \
           christhomas/nginx-proxy:alpine)
 
